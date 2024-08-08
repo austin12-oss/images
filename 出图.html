@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport"content="width=device-width, initial-scale=1" />
+        <title>出图</title>
+        <link rel="shortcut icon" href="./白底LOGO正方形-新版.png" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./myscript.js" ></script>
+    </head>
+    <style>
+        
+    </style> 
+    <body>
+        <header>
+        
+        </header> 
+        
+    <main>
+        <div  class="nav" >
+            <img src="./白底LOGO正方形-新版.png" id="logo" alt="">
+            <ul >
+                <li>
+                    <a href="http://127.0.0.1:5500/%E5%87%BA%E5%9B%BE%E6%90%AD%E5%BB%BA/%E5%87%BA%E5%9B%BE.html">首页</a>
+                </li>
+                <li>
+                    <a href="https://chatgpt.com/?model=gpt-4">gpt</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="content">
+            <!-- 文本框和按钮 -->
+            <div class="box"  style="background-color:#D6D5B7;" >
+        
+                    <textarea placeholder="请输入文本" name="text" id="text" ></textarea>
+               
+                
+                <button style="margin-top: 10%; margin-left: 25%;" class="button"  id="delbtn" onclick="clearContent()" >清除文本</button>
+                <button style="margin-top: 10%; margin-left: 10%;"class="button" id="commitbtn"onclick="commitContent()" >提交文本</button>  
+            </div >
+            <!-- tag框种子提示词系数 -->
+                <div class="box" style="background-color: rgb(189, 179, 164);"  >
+                    <div    style="height: 50%;" >
+                        <label class="label"  >故事tags</label>
+                        <textarea  name="" id="storyTags" style="background-color: beige;" placeholder="可编辑故事tags"></textarea>
+                        <label class="label"  >人物tags</label>
+                        <textarea class="label" id="storyTags" placeholder="可编辑人物tags"></textarea>
+                    </div>
+                   <br>
+                    <div  style="height: 48%; ">
+                        
+                    
+                        <div style="height: 59%; " >
+                            <input id="range" style="width:40%;" type="range" min="0" max="100" value="45"step="1" oninput="change()" onchange="change()">
+                            <span id="value">45</span>
+                            <label class="label" >提示词系数</label>
+                            <br>
+                            <br><br><br>
+                            <label for="zhongzi" class="label" >种子</label>
+                        <input id="zhongzi" type="number" min="0" step="1" style="margin-left: 10%; width: 40%;">
+                        </div>
+
+                        <button style="margin-left: 45%; margin-top: 10%;" class="button" onclick="generate_picture" > 一键生成</button>
+                        
+                    </div>  
+                </div >
+            <!-- 生成图片框 -->
+            <div class="box" style="background-color:#A0EEE1;"  >
+                <label class="label" for=" " style="display: block;" >请选择图片</label>
+                <div style="height: 81%; background-color:white">
+                </div>
+                <button style="margin-top: 10%; margin-left: 45%;" class="button"  id="delbtn" onclick="saveImage()" >保存图片</button>
+            
+            </div >
+            
+        </div>
+        
+       
+</main>
+    
+    
+</body>
+</html>
